@@ -1,0 +1,32 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../schema/fhir-single.xsd">
+  <p>
+    Some of the IHE MMA transactions make use of patient-specific information.  Even those that merely retrieve empty forms could
+    be abused by malicious actors to corrupt the form - resulting in the potential subsequent exposure of patient data.  For 
+    this reason, all MMA transactions must be appropriately secured with access limited to authorized individuals, data 
+    protected while in transit and appropriate audit measures taken.
+  </p>
+  <p>
+    Implementers should be aware of the <a href="{{site.data.fhir.path}}security.html">security considerations</a> associated with FHIR transactions,
+    particularly those related to:
+  </p>
+  <ul>
+    <li>
+      <a href="{{site.data.fhir.path}}security.html#http">Communications</a>
+    </li>
+    <li>
+      <a href="{{site.data.fhir.path}}security.html#authentication">Authentication</a>
+    </li>
+    <li>
+      <a href="{{site.data.fhir.path}}security.html#binding">Authorization/Access Control</a>
+    </li>
+    <li>
+      <a href="{{site.data.fhir.path}}security.html#audit">Audit Logging</a>
+    </li>
+    <li>
+      <a href="{{site.data.fhir.path}}security.html#signatures">Digital Signatures</a>
+    </li>
+    <li>
+      <a href="{{site.data.fhir.path}}security-labels.html">Security Labels</a>
+    </li>
+  </ul>
+</div>

@@ -1,4 +1,57 @@
 {
-  "redirect": "src-generated/sdc.json",
-  "comments": "The IG-configuration file is generated from the IG xml file in src using framework/xslt/igToConfig.xslt.  It should never be edited directly"
-}
+  "redirect": "src-generated/mma.json",
+  "comments": "The IG-configuration file is generated from the IG xml file in src using framework/xslt/igToConfig.xslt.  It should never be edited directly",
+  	"defaults": {
+		"StructureDefinition": {
+			"template-mappings": "sd-mappings.html",
+			"template-defns": "administrationreport-definitions.html",
+			"template-base": "sd.html"
+		},
+		"MedicationAdministration": {
+			"template-defns": "administrationreport-definitions.html"
+		}
+   },
+	"defaults": {
+		"Any": {
+			"template-format": "format.html",
+			"template-base": "base.html"
+		},
+		"OperationDefinition": {
+			"template-base": "op.html"
+		},
+		"CodeSystem": {
+			"template-base": "codesys.html"
+		},
+		"ConceptMap": {
+			"template-base": "cm.html"
+		},
+		"StructureMap": {
+			"template-base": "sm.html"
+		},
+		"Observation": {
+			"template-base": "ex.html"
+		},
+		"CapabilityStatement": {
+			"template-base": "capst.html"
+		},
+		"ValueSet": {
+			"template-base": "vs.html"
+		},
+		"StructureDefinition": {
+			"template-mappings": "sd-mappings.html",
+			"template-base": "sd.html",
+			"template-defns": "sd-definitions.html"
+		},
+		"MedicationRequest": {
+			"template-base": "ex.html"
+		},
+		"AllergyIntolerance": {
+			"template-base": "ex.html"
+		},
+		"Basic": {
+			"template-base": "ex.html"
+		}
+	},
+	"broken-links": "warning",
+	"sct-edition": "http://snomed.info/sct/731000124108"
+   }

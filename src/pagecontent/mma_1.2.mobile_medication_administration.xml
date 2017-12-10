@@ -1,0 +1,38 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../schema/fhir-single.xsd">
+
+	<div>
+		<a name="mma"/>
+
+<h2>The Mobile Medication Administration</h2>
+<p>The Mobile Medication Administration Profile is intended to be compatible with hospital settings, but the emphasis is on community settings in a mobile environment, or where CDA<sup><a href="#_ftn1" name="_ftnref1">[1]</a></sup> documents are not used. For CDA documents, users are advised to consult the Pharmacy CMA Profile.</p>
+<p>The MMA Profile enables mobile and lightweight web applications to handle the planned and actual administration of medication.</p>
+<p>Some uses for MMA are:</p>
+<ul>
+<li>An application for a home care nurse that receives the requests and informs the nurse about the medications that each patient is scheduled to take in a given period.</li>
+<li>An application (or the same as above) for a nurse, where the nurse can register the planned (as above) or unplanned administration of medication and submit that information to the hospital EHR.</li>
+<li>An application for patients to receive updated medication instructions on their mobile device and / or register the use of medication, e.g., by scanning the barcodes.</li>
+</ul>
+<p>The transactions for decoding barcodes and retrieving additional information about the medicinal product are described in a dedicated IHE Pharmacy technical supplement called UBP - Uniform Barcode Processing.</p>
+<p>Besides mobile applications, more conventional uses are also supported, for example:</p>
+<ul>
+<li>Recording the administration of drugs in a hospital setting</li>
+<li>Recording the administration of drugs by an infusion device (pump)</li>
+<li>Recording the administration of immunization</li>
+</ul>
+<p>Generally, this profile supports the request or report of any administration of medication.</p>
+<p>Further ahead, the IHE Pharmacy Technical Framework will be extended to the entire medication circuit, and the MMA Profile will be part of that entire interoperability framework. In other words, the MMA Profile is a part of a broader interoperability framework for the medication circuit, and implementers can safely start implementing MMA while the remainder of the IHE medication profiles based on FHIR emerge.</p>
+<p>This supplement is intended to be fully compliant with the HL7 FHIR specification, providing only use-case driven constraints to aid with interoperability and compatibility with existing Profiles.</p>
+<p>Currently the HL7 FHIR standard is in &quot;Standard for Test Use&quot; (STU) and may experience a large amount of change during this phase. Readers are advised that, while the profiled components in this supplement may not accurately reflect the most recent version of the FHIR standard, implementations of MMA will be tested as specified in this supplement. Changes to the FHIR STU will be integrated into this supplement via the formal IHE Change Proposal (CP) process.</p>
+<p>To include compatibility with existing IHE actors and profiles, this profile extends or adds the following actors:</p>
+<p><strong>Medication Administration Performer</strong> - checks for and receives instructions for administration of medications to patients, performs the necessary checks before administering.</p>
+<p><strong>Medication Administration Informer</strong> - sends the reports of the administration actions performed.</p>
+<p><strong>Medication Administration Request Placer</strong> - provides the instance orders of medication administrations to the medication Administration Performer.</p>
+<p><strong>Medication Administration Consumer</strong> - receives the reports of administration of medications.</p>
+<p>Annex A describes how these can be actors can be implemented in some scenario examples.</p>
+<p>The structure of this profile allows different systems to concur in the administration of medications for several patients - whether they are remote systems, mobile applications for professionals, or patient apps.</p>
+<p></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> CDA is the registered trademark of Health Level Seven International.</p>
+<p></p>
+
+</div>
+</div>

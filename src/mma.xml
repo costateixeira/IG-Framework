@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../schema/fhir-single.xsd">
+	<id value="mma"/>
+	<url value="http://ihe.net/fhir/profiles/mma/ImplementationGuide/mma"/>
+	<name value="Mobile Medication Administration"/>
+	<status value="draft"/>
+	<experimental value="true"/>
+	<publisher value="myself"/>
+	<contact>
+		<telecom>
+			<system value="other"/>
+			<value value="http://www.acme.com"/>
+		</telecom>
+	</contact>
+	<description value="Lorem Ipsum ..."/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+		</coding>
+	</jurisdiction>
+	<package>
+		<name value="Profiles"/>
+		<description value="Constraints on resources"/>
+		<resource>
+			<example value="false"/>
+			<name value="Medication Administration Report"/>
+			<description value="Medication Administration Report"/>
+			<acronym value="PHARM-3"/>
+			<sourceReference>
+				<reference value="StructureDefinition/administration-report"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<name value="Administration Request"/>
+			<description value="Administration Request"/>
+			<acronym value="PHARM-2"/>
+			<sourceReference>
+				<reference value="StructureDefinition/administration-request"/>
+			</sourceReference>
+		</resource>
+	</package>
+	<package>
+		<name value="Conformance Statements"/>
+		<description value="Conformance statements for each actor"/>
+		<resource>
+			<example value="false"/>
+			<name value="Medication Administration Request Placer"/>
+			<description value="Medication Administration Request Placer"/>
+			<acronym value="MRP"/>
+			<sourceReference>
+				<reference value="CapabilityStatement/ihe-mma-requestplacer"/>
+			</sourceReference>
+		</resource> 
+		<resource>
+			<example value="false"/>
+			<name value="Medication Administration Performer"/>
+			<description value="Medication Administration Performer"/>
+			<acronym value="MAP"/>
+			<sourceReference>
+				<reference value="CapabilityStatement/ihe-mma-performer"/>
+			</sourceReference>
+		</resource> 
+		<resource>
+			<example value="false"/>
+			<name value="Medication Administration Informer"/>
+			<description value="Medication Administration Informer"/>
+			<acronym value="MAI"/>
+			<sourceReference>
+				<reference value="CapabilityStatement/ihe-mma-informer"/>
+			</sourceReference>
+		</resource> 
+		<resource>
+			<example value="false"/>
+			<name value="Medication Administration Consumer"/>
+			<description value="Medication Administration Consumer"/>
+			<acronym value="MAC"/>
+			<sourceReference>
+				<reference value="CapabilityStatement/ihe-mma-consumer"/>
+			</sourceReference>
+		</resource>
+	</package>
+	<binary value="lab-diagram.png"/>
+	<binary value="mma-diagram.png"/>
+
+	<page>
+		<source value="toc.html"/>
+		<title value="Table of Contents"/>
+		<kind value="page"/>
+		<page>
+			<source value="index.html"/>
+			<title value="MMA Home Page"/>
+			<kind value="page"/>
+		</page>
+
+	<page>
+		<source value="vol1.html"/>
+		<title value="Volume 1"/>
+		<kind value="page"/>
+		<page>
+			<source value="mma_1.1.distributed_medication_management.html"/>
+			<title value="Distributed Medication Management"/>
+			<kind value="page"/>
+		</page>
+		<page>
+			<source value="mma_1.2.mobile_medication_administration.html"/>
+			<title value="Mobile Medication Administration"/>
+			<kind value="page"/>
+		</page>
+		<page>
+			<source value="mma_3.1.actor_summary_definitions.html"/>
+			<title value="Actor Summary Definitions"/>
+			<kind value="page"/>
+		</page>
+		<page>
+			<source value="mma_3.2.transaction_summary_definitions.html"/>
+			<title value="Transaction Summary Definitions"/>
+			<kind value="page"/>
+		</page>	
+		<page>
+			<source value="mma_4.glossary.html"/>
+			<title value="Glossary entries"/>
+			<kind value="page"/>
+		</page>
+		<page>
+			<source value="mma_5.mma_profile.html"/>
+			<title value="MMA Profile"/>
+			<kind value="page"/>
+			<page>
+				<source value="mma_5.1.actors_transactions_content_modules.html"/>
+				<title value="Actors Transactions Content Modules"/>
+				<kind value="page"/>
+			</page>
+			<page>
+				<source value="mma_5.2.actor_descriptions_and_profile_requirements.html"/>
+				<title value="Actor Descriptions and Profile Requirements"/>
+				<kind value="page"/>
+			</page>
+		</page>
+	</page>
+		<!--
+-->
+		<page>
+			<source value="capstatement.html"/>
+			<title value="Capability"/>
+			<kind value="page"/>
+		</page>
+		<page>
+			<source value="artifacts.html"/>
+			<title value="Artifact List"/>
+			<kind value="page"/>
+		</page>
+		<page>
+			<source value="examples.html"/>
+			<title value="Use Cases"/>
+			<kind value="page"/>
+			<page>
+				<source value="examplescenario-mma1-scenario.html"/>
+				<title value="Use Case 1 - Home Care Nurse shift"/>
+				<kind value="page"/>
+			</page>
+			<page>
+				<source value="examplescenario-mma2-scenario.html"/>
+				<title value="Use Case 2 - Metabolic Panel"/>
+				<kind value="page"/>
+			</page>
+		</page>
+		<page>
+			<source value="downloads.html"/>
+			<title value="Downloads"/>
+			<kind value="page"/>
+		</page>
+	</page>
+</ImplementationGuide>

@@ -1,0 +1,248 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../schema/fhir-single.xsd">
+   <div id="segment-content" class="segment">
+      <div class="container">
+         <div class="row">
+            <div class="inner-wrapper">
+               <div class="col-12">
+                  <ul class="nav nav-tabs">
+                     <li class="active"><a data-toggle="tab" href="#sequence">Sequence</a></li>
+                     <li><a data-toggle="tab" href="#details">Details</a></li>
+                     <li><a data-toggle="tab" href="#resources">Resources</a></li>
+                  </ul>
+                  <div class="tab-content">
+                     <div id="sequence" class="tab-pane fade in active">
+                        <h3><a name="description"></a>
+                           Description
+                           
+                        </h3>
+                        <p>Process of finding the test to order, ordering the test, seeking fulfillment, executing
+                           the test and receiving the results for a simple metabolic panel.
+                        </p>
+                        <h4><a name="preconditions"></a>
+                           Pre-Conditions
+                           
+                        </h4>
+                        <p></p>
+                        <h4><a name="postconditions"></a>
+                           Post Conditions
+                           
+                        </h4>
+                        <p></p>
+                        <p></p><img alt="Interaction diagram showing flow" src="examplescenario-mma2-diagram.png" usemap="#diagram_map"></img><map id="diagram_map" name="diagram_map">
+<area data-tab="#resources" shape="rect" id="id1" href="#allowedLabTestBundle" title="#allowedLabTestBundle" alt="" coords="105,125,302,141"/>
+</map>
+                     </div>
+                     <div id="details" class="tab-pane fade">
+                        <h2><a name="details"></a>
+                           Details
+                           
+                        </h2>
+                        <div>
+                           <table class="cols">
+                              <tr>
+                                 <td>
+                                    Publisher: (link?)
+                                    
+                                 </td>
+                                 <td><a href="versions.html#maturity">Status</a>
+                                    :
+                                    draft
+                                 </td>
+                                 <td><a href="versions.html#maturity">Experimental</a>
+                                    :
+                                    
+                                 </td>
+                                 <td><a href="versions.html#maturity">Copyright</a>
+                                    :
+                                    
+                                 </td>
+                              </tr>
+                           </table>
+                           <table class="cols">
+                              <tr>
+                                 <td><a href="versions.html#maturity">Purpose</a>
+                                    :
+                                    Show a simple lab workflow involving the ordering of a single metabolic panel and
+                                    how it expands into multiple resources in the receiving lab.
+                                 </td>
+                              </tr>
+                           </table>
+                           <p></p>
+                           <p></p>
+                        </div>
+                        <div>
+                           <h3><a name="Actors"></a>
+                              Actors
+                              
+                           </h3>
+                           <table class="grid">
+                              <tbody>
+                                 <tr>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                 </tr>
+                                 <tr xmlns="">
+                                    <td><b>Order Entry System</b></td>
+                                    <td>entity</td>
+                                    <td>An EMR or other system capable of placing lab orders</td>
+                                 </tr>
+                                 <tr xmlns="">
+                                    <td><b>Lab System</b></td>
+                                    <td>entity</td>
+                                    <td>The laboratory system responsible for executing and reporting lab tests</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <p></p>
+                           <p></p>
+                        </div>
+                        <div>
+                           <h3><a name="flow"></a>
+                              Process Flow -
+                              
+                           </h3>
+                           <div xmlns="" class="container">
+                              <div class="row">
+                                 <div class="menu">
+                                    <div class="accordion">
+                                       <div class="accordion-group">
+                                          <div class="accordion-heading area">Main Flow</div>
+                                          
+                                          start finish
+                                          
+                                          <div class="accordion-body">
+                                             <div class="accordion-inner">
+                                                <div class="accordion">
+                                                   <div class="accordion-group">
+                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#1"></a></div>
+                                                      <div class="accordion-body" id="1">Look up lab test code
+                                                         <ul>
+                                                            <div class="accordion-group">
+                                                               <div class="accordion-heading"><a class="accordion-toggle" href="#1"></a></div>
+                                                               <div class="accordion-body" id="1"><a name="p2">1
+                                                                     .
+                                                                     </a><p></p>Order entry system searches for a lab test with the name 'complex metabolic panel'
+                                                                  and receives the results
+                                                                  <p></p>
+                                                                  <p></p><b>Response</b>
+                                                                  (
+                                                                  lab
+                                                                  -
+                                                                  orderEntry
+                                                                  ):
+                                                                  <a href="example-instances.html#allowedLabTestBundle">Possible Lab Tests Search Result</a><p></p>
+                                                               </div>
+                                                            </div>
+                                                            <p></p>
+                                                            <p></p>
+                                                         </ul>
+                                                      </div>
+                                                   </div>
+                                                   <p></p>
+                                                   <p></p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="resources" class="tab-pane fade">
+                        <h3>Resources</h3>
+                        <h2>Resources</h2>
+                        <p xmlns=""></p>
+                        <h3 xmlns="">Basic</h3>
+                        <table xmlns="" class="grid">
+                           <tbody>
+                              <tr>
+                                 <th>Artifact</th>
+                                 <th>Description</th>
+                                 <th>Version</th>
+                                 <th>Created by step</th>
+                                 <th>Creating actor</th>
+                              </tr>
+                              <tr>
+                                 <td><a name="allowedLabTest" href="../examples/allowedLabTest"><b>Metabolic Panel Definition</b></a></td>
+                                 <td>Defines the LOINC/CPT/Local code for the complete metabolic panel and identifies all
+                                    of the components expected for that test.  May also link to price, pre-requisites,
+                                    etc.
+                                 </td>
+                                 <td style="background-color:whitesmoke" colspan="3"></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p xmlns=""></p>
+                        <h3 xmlns="">Bundle</h3>
+                        <table xmlns="" class="grid">
+                           <tbody>
+                              <tr>
+                                 <th>Artifact</th>
+                                 <th>Description</th>
+                                 <th>Version</th>
+                                 <th>Created by step</th>
+                                 <th>Creating actor</th>
+                              </tr>
+                              <tr>
+                                 <td><a name="allowedLabTestBundle" href="../examples/allowedLabTestBundle"><b>Possible Lab Tests Search Result</b></a></td>
+                                 <td>Result of a search for lab tests with the name 'CMP' as part of their name</td>
+                                 <td style="background-color:whitesmoke" colspan="3"></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p xmlns=""></p>
+                        <h3 xmlns="">ServiceRequest</h3>
+                        <table xmlns="" class="grid">
+                           <tbody>
+                              <tr>
+                                 <th>Artifact</th>
+                                 <th>Description</th>
+                                 <th>Version</th>
+                                 <th>Created by step</th>
+                                 <th>Creating actor</th>
+                              </tr>
+                              <tr>
+                                 <td><a name="cmpOrder" href="../examples/cmpOrder"><b>Complete Metabolic Panel Order</b></a></td>
+                                 <td>The original order entered by the clinician in the order entry system requesting a
+                                    complete metabolic panel for a patient
+                                 </td>
+                                 <td style="background-color:whitesmoke" colspan="3"></td>
+                              </tr>
+                              <tr>
+                                 <td><a name="specimenDrawRequest" href="../examples/specimenDrawRequest"><b></b></a></td>
+                                 <td>Request to draw blood for the test</td>
+                                 <td style="background-color:whitesmoke" colspan="3"></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p xmlns=""></p>
+                        <h3 xmlns="">Task</h3>
+                        <table xmlns="" class="grid">
+                           <tbody>
+                              <tr>
+                                 <th>Artifact</th>
+                                 <th>Description</th>
+                                 <th>Version</th>
+                                 <th>Created by step</th>
+                                 <th>Creating actor</th>
+                              </tr>
+                              <tr>
+                                 <td><a name="fulfillLabOrderTask" href="../examples/fulfillLabOrderTask"><b>Task seeking lab order fulfillment</b></a></td>
+                                 <td>Task originated by the order entry system seeking for the CMP order to be fulfilled
+                                    by a lab
+                                 </td>
+                                 <td style="background-color:whitesmoke" colspan="3"></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

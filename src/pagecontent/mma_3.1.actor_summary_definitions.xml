@@ -1,0 +1,53 @@
+﻿<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../schema/fhir-single.xsd">
+	<div>
+		<div class="table-responsive">
+			<table width="638" class="table table-striped table-bordered table-hover">
+				<thead  class="thead-default">
+					<tr>
+						<th width="205">
+							Actor
+						</th>
+						<th width="433">
+							Definition
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td width="205">
+							<p>Medication Administration Performer</p>
+						</td>
+						<td width="433">
+							<p>Receives instructions for administration of medications to patients, to perform the necessary checks and display it to the user (patient or healthcare professional)</p>
+						</td>
+					</tr>
+					<tr>
+						<td width="205">
+							<p>Medication Administration Informer</p>
+						</td>
+						<td width="433">
+							<p>Sends the reports of the administration actions performed.</p>
+						</td>
+					</tr>
+					<tr>
+						<td width="205">
+							<p>Medication Administration Request Placer</p>
+						</td>
+						<td width="433">
+							<p>Submits the instance orders of medication administrations to the medication Administration Performer.</p>
+						</td>
+					</tr>
+					<tr>
+						<td width="205">
+							<p>Medication Administration Consumer</p>
+						</td>
+						<td width="433">
+							<p>Receives the reports of administration of medications</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+

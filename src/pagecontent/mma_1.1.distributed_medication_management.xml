@@ -1,0 +1,28 @@
+﻿<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../schema/fhir-single.xsd">
+	<div>
+		<a name="dmm"/>
+
+<p>IHE Pharmacy realizes that the interoperability of systems can be either:</p>
+<ul>
+<li>Point-to-point - like in a typical messaging environment</li>
+<li>Broadcast - like in a document or a web services environment</li>
+</ul>
+<p>To support the expected diversity of workflows, this IHE profile (and subsequent) are expected to be closer to a broadcasting approach, in the following aspects:</p>
+<ol>
+<li>The implementation of a transaction should not depend on the implementation of any actors that are not directly involved (mandatory) in the transaction.</li>
+<li>All actors can freely couple with any other actor.</li>
+<li>The workflow management is to be done not by the message state or by the receiver. For example, a medication administration report can be either directed at a prescribing actor, or at a dispenser, or any other actor. For example, a medication administration report informs that the administration is &quot;complete&quot; but does not imply the whole treatment is complete, or if there are subsequent actions needed.</li>
+</ol>
+<p>This new supplement implements these aspects and addresses the requesting and registering of administration of medication, in mobile systems or otherwise distributed systems.</p>
+<p>The use of this profile supports the administration of medication with a standard way to do one or both of the following:</p>
+<ul>
+<li>transmit the instructions for administration of medication</li>
+<li>register and exchange information about the administration of medication</li>
+</ul>
+<p>Implementers can opt for supporting the medication administration requests (like in a patient smartphone app that serves the purpose of reminding the patient to take the medication) or the administration report (like a nurse tablet app that registers medication and submits that information to the hospital). Of course, implementers can opt for supporting both the administration request and the administration report.</p>
+<p></p>
+
+
+</div>
+</div>
+

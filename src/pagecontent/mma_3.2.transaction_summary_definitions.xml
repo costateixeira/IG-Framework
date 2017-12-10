@@ -1,0 +1,44 @@
+﻿<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../schema/fhir-single.xsd">
+	<div>
+		<a name="transactions"/>
+
+<h2>Transaction Summary Definitions</h2>
+<p>The Pharmacy Mobile and Distributed Medication Administration supplement introduces the interoperability mechanisms to be used in the requesting and registering of administration of medication, in mobile systems or otherwise distributed systems, as well as in traditional systems.</p>
+<p>The use of this profile supports the administration of medication with a standard way to:</p>
+<ul>
+<li>(optionally) transmit the instructions for administration</li>
+<li>register and exchange information about the administration of medication</li>
+</ul>
+<p></p>
+<table width="638">
+<tbody>
+<tr>
+<td width="246">
+<p>Transaction</p>
+</td>
+<td width="393">
+<p>Definition</p>
+</td>
+</tr>
+<tr>
+<td width="246">
+<p>Query Administration Requests [PHARM-2]</p>
+</td>
+<td width="393">
+<p>Request for individual administration actions to be performed</p>
+</td>
+</tr>
+<tr>
+<td width="246">
+<p>Report Administration Results [PHARM-3]</p>
+</td>
+<td width="393">
+<p>Report on the outcome of each single administration event</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+

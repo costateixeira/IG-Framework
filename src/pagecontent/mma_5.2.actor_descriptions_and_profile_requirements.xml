@@ -1,0 +1,33 @@
+﻿<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../schema/fhir-single.xsd">
+	<div>
+		<a name="actors"/>
+
+<a>actors</a>
+<h2>Actor Descriptions and Actor Profile Requirements</h2>
+<p>Most requirements are documented in Volume 2 Transactions. This section documents any additional requirements on profile's actors.</p>
+<p>In a typical implementation, after the medication is prescribed, the administrations are scheduled and administration events are defined (as instance orders), for example in an EHR in a hospital. Such systems implement the Medication Administration Request Placer.</p>
+<p>The medication orders are then consulted in a nurse's or a patient's mobile application, for the purpose of performing these administrations. This system thus implements the Medication Administration Performer.</p>
+<p>After administration, the same system informs about the status of administrations - This system thus implements the Medication Administration Informer. The administration is for example received by the EHR, which then also implements the Administration Consumer.</p>
+<h3>Medication Administration Request Placer</h3>
+<p>The Medication Administration Request Placer contains the instance orders for each planned medication administration. It responds to a FHIR search request from the Medication Administration Performer.</p>
+<h3>Medication Administration Performer</h3>
+<p>The Medication Administration Performer invokes a FHIR search for the planned administrations that are relevant for the context of the Medication Administration Performer. This context can be a combination of any of the following:</p>
+<ul>
+<li>A specific nurse that is planned to perform the administrations (in case for example of a mobile app for a nurse);</li>
+<li>A specific care team that is planned to perform the administrations (in case for example of a mobile app for a care team in a hospital ward);</li>
+<li>The patient for which the administration is planned;</li>
+<li>The time of administration (e.g., only the administrations for a given day, or a given shift).</li>
+<li>...</li>
+</ul>
+<h3>Medication Administration Informer</h3>
+<p>The Medication Administration Informer provides, by pushing a FHIR resource, a report of the outcome of a planned administration: whether the administration was effectively performed, and the actual time of administration, the performer, any additional information, etc.</p>
+<p>It also publishes a report of unplanned administrations if such unplanned administrations occur.</p>
+<h3>Medication Administration Consumer</h3>
+<p>The Medication Administration Consumer receives the information about the Medication Administration.</p>
+<p>This can be implemented by systems that follow the treatment, like the prescription or medication management systems. Or it can be systems that take that information e.g., for creating medication lists.</p>
+<p></p>
+<p></p>
+
+</div>
+</div>
+

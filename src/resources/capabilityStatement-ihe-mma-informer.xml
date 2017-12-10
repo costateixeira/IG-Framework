@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="ihe-mma-informer"/>
+  <url value="http://ihe.net/fhir/profiles/mma/CapabilityStatement/ihe-mma-informer" />
+	<version value="20171031" />
+	<title value="IHE Universal Barcode Processor Capability Statement" />
+	<name value="IHE-UBP Barcode Processor" />
+	<status value="draft" />
+	<experimental value="true" />
+	<date value="2017-11-03" />
+	<publisher value="IHE" />
+	<contact>
+		<name value="ihe" />
+		<telecom>
+			<system value="email" />
+			<value value="ihe" />
+		</telecom>
+	</contact>
+	<description
+		value="This is the FHIR capability statement for the IHE-MMA Administration Informer actor " />
+	<purpose
+		value="Main EHR capability statement, published for contracting and operational support" />
+	<copyright value="Copyright &#xA9; IHE" />
+	<kind value="instance" />
+	<fhirVersion value="3.0.1" />
+	<implementationGuide
+		value="https://ihe.net/fhir/ImplementationGuide/mma" />
+	<profile>
+		<reference value="http://ihe.net/fhir/StructureDefinition/IHE.MMA.AdministrationReport" />
+	</profile>
+</CapabilityStatement>

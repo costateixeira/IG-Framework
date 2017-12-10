@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExampleScenario>
+
+  <name value="Comprehensive Metabolic Panel"/>
+  <title value="Comprehensive Metabolic Panel - example lab scenario"/>
+	<status value="draft"/>
+	<description value="Process of finding the test to order, ordering the test, seeking fulfillment, executing the test and receiving the results for a simple metabolic panel."/>
+	<purpose value="Show a simple lab workflow involving the ordering of a single metabolic panel and how it expands into multiple resources in the receiving lab."/>
+	<actor>
+    <actorId value="orderEntry"/>
+    <type value="entity"/>
+    <name value="Order Entry System"/>
+    <description value="An EMR or other system capable of placing lab orders"/>
+  </actor>
+	<actor>
+    <actorId value="lab"/>
+    <type value="entity"/>
+    <name value="Lab System"/>
+    <description value="The laboratory system responsible for executing and reporting lab tests"/>
+  </actor>
+  <instance>
+    <resourceId value="allowedLabTest"/>
+    <resourceType value="Basic"/>
+    <name value="Metabolic Panel Definition"/>
+    <description value="Defines the LOINC/CPT/Local code for the complete metabolic panel and identifies all of the components expected for that test.  May also link to price, pre-requisites, etc."/>
+  </instance>
+  <instance>
+    <resourceId value="allowedLabTestBundle"/>
+    <!-- Whatever resource we use to define allowed lab tests -->
+    <resourceType value="Bundle"/>
+    <name value="Possible Lab Tests Search Result"/>
+    <description value="Result of a search for lab tests with the name 'CMP' as part of their name"/>
+    <containedInstance>
+      <resourceId value="allowedLabTest"/>
+    </containedInstance>
+  </instance>  
+  <instance>
+    <resourceId value="cmpOrder"/>
+    <resourceType value="ServiceRequest"/>
+    <name value="Complete Metabolic Panel Order"/>
+    <description value="The original order entered by the clinician in the order entry system requesting a complete metabolic panel for a patient"/>
+  </instance>
+  <instance>
+    <resourceId value="fulfillLabOrderTask"/>
+    <resourceType value="Task"/>
+    <name value="Task seeking lab order fulfillment"/>
+    <description value="Task originated by the order entry system seeking for the CMP order to be fulfilled by a lab"/>
+    <version>
+      <versionId value="requested"/>
+      <description value="Task is initially created as 'requested'"/>
+    </version>
+    <version>
+      <versionId value="accepted"/>
+      <description value="Task is accepted by the lab"/>
+    </version>
+    <version>
+      <versionId value="in-progress"/>
+      <description value="Lab begins work on task"/>
+    </version>
+    <version>
+      <versionId value="completed"/>
+      <description value="Lab has finished fulfillment"/>
+    </version>
+  </instance>
+  <instance>
+    <resourceId value="specimenDrawRequest"/>
+    <resourceType value="ServiceRequest"/>
+    <description value="Request to draw blood for the test"/>
+  </instance>
+  <process>
+    <title value="[Drop this level??]"/>
+    <step>
+      <process>
+        <title value="Look up lab test code"/>
+        <description value="Clinician uses order entry system to find the code for the complete metabolic panel and confirm that the included tests cover what they wish."/>
+        <postConditions value="Clinician has selected code for desired metabolic panel"/>
+        <step>
+          <operation>
+            <number value="1"/>
+            <type value="search"/>
+            <initiator value="orderEntry"/>
+            <receiver value="lab"/>
+            <description value="Order entry system searches for a lab test with the name 'complex metabolic panel' and receives the results"/>
+            <receiverActive value="false"/>
+            <!-- Todo: add support for including the the query URL -->
+            <response>
+              <resourceId value="allowedLabTestBundle"/>
+            </response>
+          </operation>
+        </step>
+      </process>
+    </step>
+  </process>
+</ExampleScenario>

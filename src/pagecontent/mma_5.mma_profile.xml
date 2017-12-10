@@ -1,0 +1,16 @@
+﻿<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../schema/fhir-single.xsd">
+	<div>
+		<a name="profile"/>
+<h2>Mobile Medication Administration (MMA) Profile</h2>
+<p>The Mobile Medication Administration Profile provides integration between systems or actors that handle medication administration and systems or actors that are upstream (e.g., prescription or dispensing systems that provide the Medication Administration plan) or downstream (e.g., EHRs or others that use the information about medication administration for any purpose).</p>
+<p>The MMA Profile supports the data exchange for the following actors and cases:</p>
+<ol>
+<li>A Medication Administration Request Placer contains the planned individual medication administration actions. The Medication Administration Performer retrieves these scheduled actions from the Medication Administration Request Placer, in order to perform them.</li>
+<li>Note: The Medication Administration Request, as per the definition above, is for one single planned event. A request to take a medication with a given frequency is not a medication administration request because it represents more than one single event. Such a prescription is expected to be &quot;decomposed&quot; in several medication administration requests by a scheduler or planner system.</li>
+<li>Note: For not scheduled (emergency or not prescribed) medications, the individual Administration Requests do not exist, neither a prescription.</li>
+<li>Note: For &quot;As needed&quot;/PRN orders, the individual Administration Requests do not exist, although a prescription may exist. Therefore, querying for administration requests will not return this medication. A mechanism to retrieve prescriptions is needed, and will be addressed by a future IHE Pharmacy profile for prescriptions.</li>
+<li>The Medication Administration Informer informs a Medication Administration Consumer about the performing of the administration activity (or its reported absence).</li>
+</ol>
+</div>
+</div>
+

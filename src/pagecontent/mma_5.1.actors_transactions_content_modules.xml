@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../schema/fhir-single.xsd">
+	<div>
+		<a name="actorsTransactionsContentModules"/>
+		<h2>MMA Actors, Transactions, and Content Modules</h2>
+		<p>This section defines the actors, transactions, and content modules in this profile. General definitions of actors are given in the Technical Frameworks General Introduction Appendix A at <a href="http://ihe.net/Technical_Frameworks/#GenIntro">http://ihe.net/Technical_Frameworks/#GenIntro</a>.</p>
+		<p>Figure X.1-1 shows the actors directly involved in the MMA Profile and the relevant transactions between them.</p>
+		<p>The MMA Profile consists of two reusable purpose transactions and actor sets:</p>
+		<ol>
+			<li>The interaction for getting medication administration requests</li>
+			<li>The interaction for reporting medication administrations</li>
+		</ol>
+		<p>Figure X.1-1: MMA Actor Diagram</p>
+		<p>Table X.1-1 lists the transactions for each actor directly involved in the MMA Profile. To claim compliance with this profile, an actor shall support all required transactions (labeled &quot;R&quot;).</p>
+		<p>Table X.1-1: MMA Profile - Actors and Transactions</p>
+		<table width="584">
+			<thead>
+				<tr>
+					<td width="162">
+						<p>Actors</p>
+					</td>
+					<td width="186">
+						<p>Transactions</p>
+					</td>
+					<td width="96">
+						<p>Optionality</p>
+					</td>
+					<td width="140">
+						<p>Reference</p>
+					</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td width="162">
+						<p>Medication Administration Request Placer</p>
+					</td>
+					<td width="186">
+						<p>Query Administration Requests [PHARM-2]</p>
+					</td>
+					<td width="96">
+						<p>R</p>
+					</td>
+					<td width="140">
+						<p>PHARM TF-2: 3.Y1</p>
+					</td>
+				</tr>
+				<tr>
+					<td width="162">
+						<p>Medication Administration Performer</p>
+					</td>
+					<td width="186">
+						<p>Query Administration Requests [PHARM-2]</p>
+					</td>
+					<td width="96">
+						<p>R</p>
+					</td>
+					<td width="140">
+						<p>PHARM TF-2: 3.Y1</p>
+					</td>
+				</tr>
+				<tr>
+					<td width="162">
+						<p>Medication Administration Informer</p>
+					</td>
+					<td width="186">
+						<p>Report Administration Results [PHARM-3]</p>
+					</td>
+					<td width="96">
+						<p>R</p>
+					</td>
+					<td width="140">
+						<p>PHARM TF-2: 3.Y3</p>
+					</td>
+				</tr>
+				<tr>
+					<td width="162">
+						<p>Medication Administration Consumer</p>
+					</td>
+					<td width="186">
+						<p>Report Administration Results [PHARM-3]</p>
+					</td>
+					<td width="96">
+						<p>R</p>
+					</td>
+					<td width="140">
+						<p>PHARM TF-2: 3.Y3</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+</div>
+
