@@ -52,7 +52,6 @@
                            </div>
                            <div id="details" class="tab-pane fade">
                               <h2>
-                                 <a name="details" />
                                  Details
                               </h2>
                               <div>
@@ -83,7 +82,7 @@
                                     <tr>
                                        <td>
                                           <a href="versions.html#maturity">Purpose</a>
-                                          :
+										  :
                                           <xsl:value-of select="/ExampleScenario/purpose/@value" />
                                        </td>
                                     </tr>
@@ -119,7 +118,6 @@
                               </div>
                            </div>
                            <div id="resources" class="tab-pane fade">
-                              <h3>Resources</h3>
                               <h2>Resources</h2>
                               <xsl:for-each-group select="ExampleScenario/instance/resourceType" group-by="@value">
                                  <xsl:apply-templates select="../resourceType" />
@@ -153,39 +151,27 @@
          </td>
       </tr>
    </xsl:template>
+
+
    <xsl:template match="/ExampleScenario/process">
       <!--		<h3><xsl:value-of select="title/@value"/></h3> <br/>  -->
       <div class="container">
          <div class="row">
-            <div class="menu">
-               <div class="accordion">
-                  <!-- Áreas -->
-                  <div class="accordion-group">
-                     <div class="accordion-heading area">Main Flow</div>
-                     <!-- /Área -->
-                     start finish
-                     <div class="accordion-body">
-                        <div class="accordion-inner">
-                           <div class="accordion">
-                              <xsl:apply-templates select="step" />
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- /accordion -->
-               </div>
-            </div>
+			   <div>
+				  <xsl:apply-templates select="step" />
+			   </div>
          </div>
       </div>
-   </xsl:template>
+   </xsl:template>   
+   
+   
    <xsl:template match="process">
       <xsl:value-of select="title/@value" />
-      <ul>
          <xsl:apply-templates select="./step" />
-      </ul>
    </xsl:template>
+
+<!--
    <xsl:template match="step">
-      <!-- Each Step -->
       <div class="accordion-group">
          <div class="accordion-heading">
             <a class="accordion-toggle" href="#{position()}" />
@@ -193,11 +179,25 @@
          <div class="accordion-body" id="{position()}">
             <xsl:apply-templates select="./*" />
          </div>
-         <!-- /Serviços -->
       </div>
       <p />
       <p />
    </xsl:template>
+-->
+   
+   <xsl:template match="step">
+      <div class="well">
+      <div>
+            <a href="#{position()}" />
+         </div>
+         <div id="{position()}">
+            <xsl:apply-templates select="./*" />
+      </div>
+
+      </div>
+   </xsl:template>
+   
+   
    <xsl:template match="operation">
       <a name="p2">
          <xsl:value-of select="number/@value" />
@@ -212,6 +212,10 @@
       <xsl:apply-templates select="./response" />
       <p />
    </xsl:template>
+   
+   
+<!--   
+  
    <xsl:template match="alternative">
       <a name="p2">
          Alternative:
@@ -219,23 +223,37 @@
       </a>
       <xsl:value-of select="name/@value" />
       <xsl:value-of select="description/@value" />
-      <!-- IF STEP IS ALTERNATIVE -->
       <div class="accordion-inner">
          <div class="accordion">
             <xsl:apply-templates select="./option" />
-            <!--
-				<div class="accordion-group">
-						<div class="accordion-heading ponto">
-							<a class="accordion-toggle" data-toggle="collapse" href="{position()}">Option1 #1-1-1</a>
-						</div>
-						<div class="accordion-body" id="{position()}">
-						<xsl:apply-templates select="./option"/>
-						</div>
-					</div>
-					-->
+            <xsl:apply-templates select="./option" mode="Custom" />
          </div>
       </div>
    </xsl:template>
+   
+-->   
+
+
+	<xsl:template match="alternative">
+		<a name="p2">
+         Alternative:
+         <xsl:value-of select="number/@value" />
+		</a>
+		<xsl:value-of select="name/@value" />
+		<xsl:value-of select="description/@value" />
+		<ul class="nav nav-tabs">
+            <xsl:apply-templates select="./option" />
+		</ul>
+		<div class="tab-content">
+            <xsl:apply-templates select="./option" mode="Custom" />
+		
+		</div>
+		
+   </xsl:template>
+
+
+   
+<!--   
    <xsl:template match="option">
       <xsl:variable name="id" select="position()" />
       <xsl:variable name="optionname" select="./description/@value" />
@@ -247,14 +265,96 @@
                <xsl:value-of select="./description/@value" />
             </a>
          </div>
-         <!-- Serviços -->
          <div class="accordion-body" id="{$id}">
             <xsl:apply-templates select="./*" />
          </div>
-         <!-- /Serviços -->
       </div>
    </xsl:template>
+-->
+
+
+  <xsl:template match="option">
+      <xsl:variable name="id" select="position()" />
+      <xsl:variable name="optionname" select="./description/@value" />
+
+      <xsl:if test="$id = 1">
+		<li class="nav-item active">
+		<a data-toggle="tab" href="#menu{$id}"><xsl:value-of select="./name/@value" /></a>
+		</li>
+      </xsl:if>
+
+      <xsl:if test="$id != 1">
+		<li class="nav-item">
+		<a data-toggle="tab" href="#menu{$id}"><xsl:value-of select="./name/@value" /></a>
+		</li>
+      </xsl:if>
+   </xsl:template>
+
+
+   <xsl:template match="option" mode="Custom">
+      <xsl:variable name="id" select="position()" />
+      <xsl:variable name="optionname" select="./description/@value" />
+
+      <xsl:if test="$id = 1">
+		<div id="menu{$id}" class="tab-pane fade in active">
+		  <p><xsl:value-of select="./description/@value" /></p>
+		</div>
+      </xsl:if>
+
+      <xsl:if test="$id != 1">
+		<div id="menu{$id}" class="tab-pane fade">
+		  <p><xsl:value-of select="./description/@value" /></p>
+		</div>
+      </xsl:if>
+
+
+
+
+	  </xsl:template>
+   
+<!-- 
+
+<div class="container">
+  <h2>Dynamic Tabs</h2>
+  <ul class="nav nav-tabs">                                                             <xsl:value-of select="{$optionname}" />
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+    <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+    <li><a data-toggle="tab" href="#menu4">Menu 4</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>HOME</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+	<div id="menu4" class="tab-pane fade">
+      <h3>HOME</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+  </div>
+</div>
+
+
+
+-->   
+   
+   
    <xsl:template match="pause">(pause)</xsl:template>
+
    <xsl:template match="request">
       <b>Request</b>
       (
@@ -264,6 +364,7 @@
       ):
       <xsl:apply-templates select="./resourceId" />
    </xsl:template>
+
    <xsl:template match="response">
       <b>Response</b>
       (

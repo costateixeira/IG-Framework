@@ -156,7 +156,7 @@
 		<step>
 			<operation> 
 				<number value="1"/> 
-				<name value="1. Get today's schedule"/> 
+				<name value="Nurse checks today's schedule"/> 
 				<initiator value="Nurse"/> 
 				<receiver value="MAP"/> 
 			</operation>		
@@ -164,13 +164,13 @@
 
 		<step>
 			<process> 
-				<title value="P1. Query Administration Requests"/> 
+				<title value="Query Administration Requests"/> 
 				<description value="Query for medication administration orders,\n- For today's shifts\n- For today's patients" />
 
 				<step>
 					<operation> 
 						<number value="2"/> 
-						<name value="2.Query for medication administration orders,\n- For today's shifts\n- For today's patients"/>
+						<name value="Query for medication administration orders,\n- For today's shifts\n- For today's patients"/>
 						<initiator value="MAP"/> 
 						<receiver value="OP"/> 
 						<request>
@@ -191,7 +191,7 @@
 
 		<step>
 			<operation>		
-				<number value="4"/> 
+				<number value="3"/> 
 				<name value="Notify (alert)"/> 
 				<initiator value="MAP"/> 
 				<receiver value="Nurse"/> 
@@ -199,7 +199,7 @@
 		</step>
 		<step>
 			<operation>		
-				<number value="5"/> 
+				<number value="4"/> 
 				<name value="Read orders"/> 
 				<initiator value="Nurse"/> 
 				<receiver value="MAP"/> 
@@ -222,9 +222,10 @@
 
 		<step>
 			<alternative>
-				<name value="Check if patient took drugs"/>		
+				<name value="Did patient take meds"/>		
 				<option>
-					<description value="Yes, patient took drugs"/>
+					<name value="Yes"/>		
+					<description value="Yes, patient took meds"/>
 					<step>
 						<process>
 							<title value="Register Meds taken"/>
@@ -241,7 +242,8 @@
 					</step>
 				</option>
 				<option>
-					<description value="No, patient did not take drugs"/>
+					<name value="No"/>		
+					<description value="No, patient did not take meds"/>
 					<step>
 						<process>
 							<title value="Register Meds NOT taken"/>
@@ -260,7 +262,8 @@
 
 
 				<option>
-					<description value="Not clear"/>
+					<name value="Not sure"/>		
+					<description value="Not sure"/>
 					<step>
 						<pause value="true"/>		
 					</step>

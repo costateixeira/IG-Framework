@@ -44,7 +44,7 @@
 </map>
                      </div>
                      <div id="details" class="tab-pane fade">
-                        <h2><a name="details"></a>
+                        <h2>
                            Details
                            
                         </h2>
@@ -72,7 +72,7 @@
                            <table class="cols">
                               <tr>
                                  <td><a href="versions.html#maturity">Purpose</a>
-                                    :
+                                    										  :
                                     Purpose: this serves to enable remote performing of medication administration, by
                                     using remote / mobile devices to a) Get the planned medication administrations and
                                     b) Record the performing of these administrations without a permanent connection to
@@ -129,296 +129,180 @@
                            </h3>
                            <div xmlns="" class="container">
                               <div class="row">
-                                 <div class="menu">
-                                    <div class="accordion">
-                                       <div class="accordion-group">
-                                          <div class="accordion-heading area">Main Flow</div>
-                                          
-                                          start finish
-                                          
-                                          <div class="accordion-body">
-                                             <div class="accordion-inner">
-                                                <div class="accordion">
-                                                   <div class="accordion-group">
-                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#1"></a></div>
-                                                      <div class="accordion-body" id="1"><a name="p2">1
-                                                            .
-                                                            </a>1. Get today's schedule
-                                                         <p></p>
-                                                         <p></p>
-                                                         <p></p>
-                                                         <p></p>
-                                                      </div>
-                                                   </div>
-                                                   <p></p>
-                                                   <p></p>
-                                                   <div class="accordion-group">
-                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#2"></a></div>
-                                                      <div class="accordion-body" id="2">P1. Query Administration Requests
-                                                         <ul>
-                                                            <div class="accordion-group">
-                                                               <div class="accordion-heading"><a class="accordion-toggle" href="#1"></a></div>
-                                                               <div class="accordion-body" id="1"><a name="p2">2
-                                                                     .
-                                                                     </a>2.Query for medication administration orders,\n- For today's shifts\n- For today's
-                                                                  patients
-                                                                  <p></p>
-                                                                  <p></p><b>Request</b>
-                                                                  (
-                                                                  OP
-                                                                  -
-                                                                  MAP
-                                                                  ):
-                                                                  <a href="example-instances.html#iherxqry">Search query1</a><p></p><b>Response</b>
-                                                                  (
-                                                                  OP
-                                                                  -
-                                                                  MAP
-                                                                  ):
-                                                                  <a href="example-instances.html#iherx001bundle">Bundle of Medication Requests</a><p></p>
-                                                               </div>
-                                                            </div>
-                                                            <p></p>
-                                                            <p></p>
-                                                         </ul>
-                                                      </div>
-                                                   </div>
-                                                   <p></p>
-                                                   <p></p>
-                                                   <div class="accordion-group">
-                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#3"></a></div>
-                                                      <div class="accordion-body" id="3">(pause)</div>
-                                                   </div>
-                                                   <p></p>
-                                                   <p></p>
-                                                   <div class="accordion-group">
-                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#4"></a></div>
-                                                      <div class="accordion-body" id="4"><a name="p2">4
-                                                            .
-                                                            </a>Notify (alert)
-                                                         <p></p>
-                                                         <p></p>
-                                                         <p></p>
-                                                         <p></p>
-                                                      </div>
-                                                   </div>
-                                                   <p></p>
-                                                   <p></p>
-                                                   <div class="accordion-group">
-                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#5"></a></div>
-                                                      <div class="accordion-body" id="5"><a name="p2">5
-                                                            .
-                                                            </a>Read orders
-                                                         <p></p>
-                                                         <p></p>
-                                                         <p></p>
-                                                         <p></p>
-                                                      </div>
-                                                   </div>
-                                                   <p></p>
-                                                   <p></p>
-                                                   <div class="accordion-group">
-                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#6"></a></div>
-                                                      <div class="accordion-body" id="6">(pause)</div>
-                                                   </div>
-                                                   <p></p>
-                                                   <p></p>
-                                                   <div class="accordion-group">
-                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#7"></a></div>
-                                                      <div class="accordion-body" id="7"><a name="p2">5
-                                                            .
-                                                            </a>Ask if patient took meds
-                                                         <p></p>
-                                                         <p></p>
-                                                         <p></p>
-                                                         <p></p>
-                                                      </div>
-                                                   </div>
-                                                   <p></p>
-                                                   <p></p>
-                                                   <div class="accordion-group">
-                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#8"></a></div>
-                                                      <div class="accordion-body" id="8"><a name="p2">
-                                                            Alternative:
-                                                            </a>Check if patient took drugs
-                                                         <div class="accordion-inner">
-                                                            <div class="accordion">
-                                                               <div class="accordion-group">
-                                                                  <div class="accordion-heading ponto"><a class="accordion-toggle" data-parent="1" data-toggle="collapse" href="#1">1
-                                                                        -
-                                                                        Yes, patient took drugs</a></div>
-                                                                  <div class="accordion-body" id="1">
-                                                                     <div class="accordion-group">
-                                                                        <div class="accordion-heading"><a class="accordion-toggle" href="#2"></a></div>
-                                                                        <div class="accordion-body" id="2">Register Meds taken
-                                                                           <ul>
-                                                                              <div class="accordion-group">
-                                                                                 <div class="accordion-heading"><a class="accordion-toggle" href="#1"></a></div>
-                                                                                 <div class="accordion-body" id="1"><a name="p2">1a
-                                                                                       .
-                                                                                       </a>Register Meds taken
-                                                                                    <p></p>
-                                                                                    <p></p>
-                                                                                    <p></p>
-                                                                                    <p></p>
-                                                                                 </div>
-                                                                              </div>
-                                                                              <p></p>
-                                                                              <p></p>
-                                                                           </ul>
-                                                                        </div>
-                                                                     </div>
-                                                                     <p></p>
-                                                                     <p></p>
-                                                                  </div>
-                                                               </div>
-                                                               <div class="accordion-group">
-                                                                  <div class="accordion-heading ponto"><a class="accordion-toggle" data-parent="2" data-toggle="collapse" href="#2">2
-                                                                        -
-                                                                        No, patient did not take drugs</a></div>
-                                                                  <div class="accordion-body" id="2">
-                                                                     <div class="accordion-group">
-                                                                        <div class="accordion-heading"><a class="accordion-toggle" href="#2"></a></div>
-                                                                        <div class="accordion-body" id="2">Register Meds NOT taken
-                                                                           <ul>
-                                                                              <div class="accordion-group">
-                                                                                 <div class="accordion-heading"><a class="accordion-toggle" href="#1"></a></div>
-                                                                                 <div class="accordion-body" id="1"><a name="p2">1b
-                                                                                       .
-                                                                                       </a>Register Meds NOT taken
-                                                                                    <p></p>
-                                                                                    <p></p>
-                                                                                    <p></p>
-                                                                                    <p></p>
-                                                                                 </div>
-                                                                              </div>
-                                                                              <p></p>
-                                                                              <p></p>
-                                                                           </ul>
-                                                                        </div>
-                                                                     </div>
-                                                                     <p></p>
-                                                                     <p></p>
-                                                                  </div>
-                                                               </div>
-                                                               <div class="accordion-group">
-                                                                  <div class="accordion-heading ponto"><a class="accordion-toggle" data-parent="3" data-toggle="collapse" href="#3">3
-                                                                        -
-                                                                        Not clear</a></div>
-                                                                  <div class="accordion-body" id="3">
-                                                                     <div class="accordion-group">
-                                                                        <div class="accordion-heading"><a class="accordion-toggle" href="#2"></a></div>
-                                                                        <div class="accordion-body" id="2">(pause)</div>
-                                                                     </div>
-                                                                     <p></p>
-                                                                     <p></p>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <p></p>
-                                                   <p></p>
-                                                   <div class="accordion-group">
-                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#9"></a></div>
-                                                      <div class="accordion-body" id="9">(pause)</div>
-                                                   </div>
-                                                   <p></p>
-                                                   <p></p>
-                                                   <div class="accordion-group">
-                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#10"></a></div>
-                                                      <div class="accordion-body" id="10"><a name="p2">6
-                                                            .
-                                                            </a>Administer drug
-                                                         <p></p>
-                                                         <p></p>
-                                                         <p></p>
-                                                         <p></p>
-                                                      </div>
-                                                   </div>
-                                                   <p></p>
-                                                   <p></p>
-                                                   <div class="accordion-group">
-                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#11"></a></div>
-                                                      <div class="accordion-body" id="11"><a name="p2">7
-                                                            .
-                                                            </a>Register administration
-                                                         <p></p>
-                                                         <p></p>
-                                                         <p></p>
-                                                         <p></p>
-                                                      </div>
-                                                   </div>
-                                                   <p></p>
-                                                   <p></p>
-                                                   <div class="accordion-group">
-                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#12"></a></div>
-                                                      <div class="accordion-body" id="12">(pause)</div>
-                                                   </div>
-                                                   <p></p>
-                                                   <p></p>
-                                                   <div class="accordion-group">
-                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#13"></a></div>
-                                                      <div class="accordion-body" id="13">P2. Update administration reports
-                                                         <ul>
-                                                            <div class="accordion-group">
-                                                               <div class="accordion-heading"><a class="accordion-toggle" href="#1"></a></div>
-                                                               <div class="accordion-body" id="1"><a name="p2">8
-                                                                     .
-                                                                     </a>Nurse updates administration report
-                                                                  <p></p>
-                                                                  <p></p><b>Request</b>
-                                                                  (
-                                                                  MAP
-                                                                  -
-                                                                  Nurse
-                                                                  ):
-                                                                  <a href="example-instances.html#iheadm002">Lunch meds - taken</a><p></p>
-                                                                  <p></p>
-                                                               </div>
-                                                            </div>
-                                                            <p></p>
-                                                            <p></p>
-                                                         </ul>
-                                                      </div>
-                                                   </div>
-                                                   <p></p>
-                                                   <p></p>
-                                                   <div class="accordion-group">
-                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#14"></a></div>
-                                                      <div class="accordion-body" id="14">(pause)</div>
-                                                   </div>
-                                                   <p></p>
-                                                   <p></p>
-                                                   <div class="accordion-group">
-                                                      <div class="accordion-heading"><a class="accordion-toggle" href="#15"></a></div>
-                                                      <div class="accordion-body" id="15">P3. Upload administration reports
-                                                         <ul>
-                                                            <div class="accordion-group">
-                                                               <div class="accordion-heading"><a class="accordion-toggle" href="#1"></a></div>
-                                                               <div class="accordion-body" id="1"><a name="p2">9
-                                                                     .
-                                                                     </a>Refresh
-                                                                  <p></p>
-                                                                  <p></p><b>Request</b>
-                                                                  (
-                                                                  MAC
-                                                                  -
-                                                                  MAP
-                                                                  ):
-                                                                  <a href="example-instances.html#"></a><p></p>
-                                                                  <p></p>
-                                                               </div>
-                                                            </div>
-                                                            <p></p>
-                                                            <p></p>
-                                                         </ul>
-                                                      </div>
-                                                   </div>
-                                                   <p></p>
-                                                   <p></p>
-                                                </div>
+                                 <div>
+                                    <div class="well">
+                                       <div><a href="#1"></a></div>
+                                       <div id="1"><a name="p2">1
+                                             .
+                                             </a>Nurse checks today's schedule
+                                          <p></p>
+                                          <p></p>
+                                          <p></p>
+                                          <p></p>
+                                       </div>
+                                    </div>
+                                    <div class="well">
+                                       <div><a href="#2"></a></div>
+                                       <div id="2">Query Administration Requests
+                                          <div class="well">
+                                             <div><a href="#1"></a></div>
+                                             <div id="1"><a name="p2">2
+                                                   .
+                                                   </a>Query for medication administration orders,\n- For today's shifts\n- For today's patients
+                                                <p></p>
+                                                <p></p><b>Request</b>
+                                                (
+                                                OP
+                                                -
+                                                MAP
+                                                ):
+                                                <a href="example-instances.html#iherxqry">Search query1</a><p></p><b>Response</b>
+                                                (
+                                                OP
+                                                -
+                                                MAP
+                                                ):
+                                                <a href="example-instances.html#iherx001bundle">Bundle of Medication Requests</a><p></p>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="well">
+                                       <div><a href="#3"></a></div>
+                                       <div id="3">(pause)</div>
+                                    </div>
+                                    <div class="well">
+                                       <div><a href="#4"></a></div>
+                                       <div id="4"><a name="p2">3
+                                             .
+                                             </a>Notify (alert)
+                                          <p></p>
+                                          <p></p>
+                                          <p></p>
+                                          <p></p>
+                                       </div>
+                                    </div>
+                                    <div class="well">
+                                       <div><a href="#5"></a></div>
+                                       <div id="5"><a name="p2">4
+                                             .
+                                             </a>Read orders
+                                          <p></p>
+                                          <p></p>
+                                          <p></p>
+                                          <p></p>
+                                       </div>
+                                    </div>
+                                    <div class="well">
+                                       <div><a href="#6"></a></div>
+                                       <div id="6">(pause)</div>
+                                    </div>
+                                    <div class="well">
+                                       <div><a href="#7"></a></div>
+                                       <div id="7"><a name="p2">5
+                                             .
+                                             </a>Ask if patient took meds
+                                          <p></p>
+                                          <p></p>
+                                          <p></p>
+                                          <p></p>
+                                       </div>
+                                    </div>
+                                    <div class="well">
+                                       <div><a href="#8"></a></div>
+                                       <div id="8"><a name="p2">
+                                             Alternative:
+                                             </a>Did patient take meds
+                                          <ul class="nav nav-tabs">
+                                             <li class="nav-item active"><a data-toggle="tab" href="#menu1">Yes</a></li>
+                                             <li class="nav-item"><a data-toggle="tab" href="#menu2">No</a></li>
+                                             <li class="nav-item"><a data-toggle="tab" href="#menu3">Not sure</a></li>
+                                          </ul>
+                                          <div class="tab-content">
+                                             <div id="menu1" class="tab-pane fade in active">
+                                                <p>Yes, patient took meds</p>
+                                             </div>
+                                             <div id="menu2" class="tab-pane fade">
+                                                <p>No, patient did not take meds</p>
+                                             </div>
+                                             <div id="menu3" class="tab-pane fade">
+                                                <p>Not sure</p>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="well">
+                                       <div><a href="#9"></a></div>
+                                       <div id="9">(pause)</div>
+                                    </div>
+                                    <div class="well">
+                                       <div><a href="#10"></a></div>
+                                       <div id="10"><a name="p2">6
+                                             .
+                                             </a>Administer drug
+                                          <p></p>
+                                          <p></p>
+                                          <p></p>
+                                          <p></p>
+                                       </div>
+                                    </div>
+                                    <div class="well">
+                                       <div><a href="#11"></a></div>
+                                       <div id="11"><a name="p2">7
+                                             .
+                                             </a>Register administration
+                                          <p></p>
+                                          <p></p>
+                                          <p></p>
+                                          <p></p>
+                                       </div>
+                                    </div>
+                                    <div class="well">
+                                       <div><a href="#12"></a></div>
+                                       <div id="12">(pause)</div>
+                                    </div>
+                                    <div class="well">
+                                       <div><a href="#13"></a></div>
+                                       <div id="13">P2. Update administration reports
+                                          <div class="well">
+                                             <div><a href="#1"></a></div>
+                                             <div id="1"><a name="p2">8
+                                                   .
+                                                   </a>Nurse updates administration report
+                                                <p></p>
+                                                <p></p><b>Request</b>
+                                                (
+                                                MAP
+                                                -
+                                                Nurse
+                                                ):
+                                                <a href="example-instances.html#iheadm002">Lunch meds - taken</a><p></p>
+                                                <p></p>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="well">
+                                       <div><a href="#14"></a></div>
+                                       <div id="14">(pause)</div>
+                                    </div>
+                                    <div class="well">
+                                       <div><a href="#15"></a></div>
+                                       <div id="15">P3. Upload administration reports
+                                          <div class="well">
+                                             <div><a href="#1"></a></div>
+                                             <div id="1"><a name="p2">9
+                                                   .
+                                                   </a>Refresh
+                                                <p></p>
+                                                <p></p><b>Request</b>
+                                                (
+                                                MAC
+                                                -
+                                                MAP
+                                                ):
+                                                <a href="example-instances.html#"></a><p></p>
+                                                <p></p>
                                              </div>
                                           </div>
                                        </div>
@@ -429,7 +313,6 @@
                         </div>
                      </div>
                      <div id="resources" class="tab-pane fade">
-                        <h3>Resources</h3>
                         <h2>Resources</h2>
                         <p xmlns=""></p>
                         <h3 xmlns="">MedicationRequest</h3>
